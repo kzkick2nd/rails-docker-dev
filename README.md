@@ -1,5 +1,5 @@
 # Rails on Docker 練習台
-- ruby2.4.2 + Rails5.1.4
+- ruby2.4.2 + Rails5.1.5
 - http://localhost:3000
 
 ## 初期化（すべてローカル実行）
@@ -19,7 +19,7 @@
 - ローカルからコンテナに対して`docker-compose exec app bundle exec rake db:migrate`
 
 # MEMO
-- rails周りの設定は、config/database.ymlのlocalhostをdbに置き換えたくらい。
+- rails周りの設定は、config/database.ymlのlocalhostをdbに置き換えたのみ。
 
 # TODO
 - byebug系のattach
