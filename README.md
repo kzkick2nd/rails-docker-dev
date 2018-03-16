@@ -5,8 +5,9 @@
 ## 初期化（すべてローカル実行）
 - 起動 => `docker-compose up -d`
 - 停止 => `docker-compose down`
-- Rails初期化1 => `docker-compose exec app bin/setup`
-- Rails初期化2 => `docker-compose exec app bin/update`
+- Rails初期化 => `docker-compose exec app bin/setup`
+- Rails初期化 => `docker-compose exec app bin/update`
+- yarn初期化 => `docker-compose exec app yarn install`
 
 ## Rails系コマンドについて
 - ローカルのRailsバージョンが同じであれば、ファイル操作だけの`rails g`系や`rake routes`コマンドはローカル実行しても良い
@@ -19,7 +20,7 @@
 - ローカルからコンテナに対して`docker-compose exec app bundle exec rake db:migrate`
 
 # MEMO
-- rails周りの設定は、config/database.ymlのlocalhostをdbに置き換えたのみ。
+- config/database.ymlのhostは、docekrとそれ以外に対応するために、環境変数`DB_HOSTNAME`を見て分岐。
 
 # TODO
 - byebug系のattach
